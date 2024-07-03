@@ -65,9 +65,9 @@
     </div>
 
     <div class="row btn-row btn2">
-      <button>첫 번째 값 X 2</button>
-      <button>두 번째 값 제곱</button>
-      <button>전체 산술 연산 결과 출력</button>
+      <button onclick="doubleFn()">첫 번째 값 X 2</button>
+      <button onclick="squareFn()">두 번째 값 제곱</button>
+      <button onclick="allOperationsFn()">전체 산술 연산 결과 출력</button>
     </div>
 
     <div class="row">
@@ -78,7 +78,32 @@
   </div>
 
 
+  <hr>
 
+  <h3>증감/감소 연산자(++,--)</h3>
+  <pre>
+    - 1씩 값을 증가/감소 시키는 연산자 
+      
+    - 합쳐서 "증감 연산자"라고 부르기도 함
+
+    - 단항 연산자 중 한 종류
+      (산술 연산자는 2항 연산자) 
+
+    * 전위 연산(제일 먼저 1을 증가/감소 시키기) -> ++변수명 / --변수명
+
+    * 후위 연산(제일 나중에 1을 증가/감소 시키기) -> 변수명++ / 변수명--
+  </pre>
+
+  <div>
+    <button onclick="decrease()">-1</button>
+    <span id="result">0</span>
+    <button onclick="increase()">+1</button>
+  </div>
+
+
+  <h3>전위/후위 연산 확인하기</h3>
+  <button onclick="checkFn()">console에서 확인하기</button>
+  
 
 
   <script src="../js/03_연산자1.js"></script>
