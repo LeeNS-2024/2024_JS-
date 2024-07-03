@@ -26,3 +26,8 @@
 #calcResult{
   color: red;
 }
+
+.btn2 > button {
+  font-size: 10px;
+  letter-spacing: -1px; /* 자간 설정 */
+}
