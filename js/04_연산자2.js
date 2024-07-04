@@ -9,7 +9,7 @@
 
 
 /** 비교 연산자 확인 */
-function check1(){
+function check1() {
 
   const num1 = 100;
   const num2 = 100;
@@ -22,7 +22,7 @@ function check1(){
   console.log("동등 비교(==, !=)");
 
   // console.log(num1 + " == " + num2 + " => " + (num1 == num2));
-  
+
   // 100 == 100 => true
   console.log(`${num1} == ${num2} -> ${num1 == num2}`); // t
   console.log(`${num1} == ${num3} -> ${num1 == num3}`); // f
@@ -41,7 +41,7 @@ function check1(){
   console.log(`${num1} === ${num2} -> ${num1 === num2}`); // t
   console.log(`${num1} === ${num3} -> ${num1 === num3}`); // f
   console.log(`${num1} !== ${num3} -> ${num1 !== num3}`); // t
-  
+
   // 동일 비교(숫자 === 문자열)
   console.log(`${num1} === "${str1}" -> ${num1 === str1} `);
 
@@ -54,13 +54,13 @@ function check1(){
   // 이상/이하
   console.log(`${num1} >= ${num2} -> ${num1 >= num2}`); // t
 
-/* 복합 기호에서 등호(=)는 무조건 오른쪽!!!! */
+  /* 복합 기호에서 등호(=)는 무조건 오른쪽!!!! */
 
 }
 
 
 /** 혹/짝 판별 함수 */
-function oddEvenCheck(){
+function oddEvenCheck() {
   const input1 = document.getElementById("input1");
 
   // #input1 요소에 작성된 값을 얻어와
@@ -81,13 +81,13 @@ function oddEvenCheck(){
 
 
 /** 배수 확인 함수*/
-function multipleCheck(){
+function multipleCheck() {
 
   // 배수 확인에 필요한 요소를 얻어와 변수에 저장
   const input2 = document.getElementById("input2");
   const input3 = document.getElementById("input3");
   const result2 = document.getElementById("result2");
-  
+
   const num2 = Number(input2.value);  // 입력 값 숫자로 변환
   const num3 = Number(input3.value);  // 입력 값 숫자로 변환
 
@@ -99,14 +99,14 @@ function multipleCheck(){
 }
 
 /** 복합 대입 연산자 확인 */
-function compoundCheck(){
+function compoundCheck() {
   let number = 100;
   console.log(`number : ${number}`); // 100
-  
-  number +=20; // number = number + 20; -> 120
+
+  number += 20; // number = number + 20; -> 120
   console.log(`number +=20 : ${number}`); // 120
 
-  number -=60; // number = number -60;
+  number -= 60; // number = number -60;
   console.log(`number -= 60 : ${number}`);  // 60
 
   number *= 3;  // number = number * 3;
@@ -115,7 +115,7 @@ function compoundCheck(){
   number /= 10; // number = number / 10;
   console.log(`number /=10 : ${number}`); // 18
 
-  number %=5; // number = number %5
+  number %= 5; // number = number %5
   console.log(`number %=5 : ${number}`);  // 3
 
 }
@@ -127,16 +127,16 @@ function compoundCheck(){
 
 
 /** AND 연산자 확인 */
-function andCheck(){
-  
+function andCheck() {
+
   // 104는 100 이상의 숫자이면서 짝수인가 ?
-  const bool1 = (104 >= 100) && (104 % 2 ===0);
+  const bool1 = (104 >= 100) && (104 % 2 === 0);
 
   console.log(`104는 100이상의 숫자이면서 짝수인가 ? ${bool1}`);
 
 
   // 50은 70이하의 숫자이고, 4의 배수가 맞는가 ?
-  const bool2 = (50 >= 70) && (50 % 4===0);
+  const bool2 = (50 >= 70) && (50 % 4 === 0);
   console.log(`50은 70이하의 숫자이고, 4의 배수가 맞는가 ? ${bool2}`); // f
 
   // 13은 1부터 10사이의 숫자가 맞는가 ?
@@ -145,9 +145,9 @@ function andCheck(){
 }
 
 /** OR 연산자 확인 */
-function orCheck(){
+function orCheck() {
   // 4는 10을 초과하거나 짝수인가 ?
-  const bool1 = ( 4 > 10 ) || ( 4 % 2 ===0 ); // true
+  const bool1 = (4 > 10) || (4 % 2 === 0); // true
   console.log(`4는 10을 초과하거나 짝수인가 ? ${bool1}`);
 
   const name = "홍길동";

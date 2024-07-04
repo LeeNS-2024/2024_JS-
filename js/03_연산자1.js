@@ -25,7 +25,7 @@ const calcResult = document.getElementById("calcResult");
  * 더하기 함수
  */
 
-function plusFn(){
+function plusFn() {
 
   //더하기 함수 정의
 
@@ -42,7 +42,7 @@ function plusFn(){
 
 
 /** 빼기 함수 */
-function minusFn(){
+function minusFn() {
 
   // Number('숫자만 작성된 문자열') -> 숫자(number)로 변환 (생성자)
 
@@ -58,7 +58,7 @@ function minusFn(){
 }
 
 /** 곱하기 함수 */
-function multiFn(){
+function multiFn() {
   const v1 = Number(number1.value);
   const v2 = Number(number2.value);
 
@@ -68,7 +68,7 @@ function multiFn(){
 }
 
 /** 나누기 함수 */
-function divFn(){
+function divFn() {
   const v1 = Number(number1.value);
   const v2 = Number(number2.value);
 
@@ -78,7 +78,7 @@ function divFn(){
 }
 
 /** 나머지 함수 */
-function modFn(){
+function modFn() {
   const v1 = Number(number1.value);
   const v2 = Number(number2.value);
 
@@ -94,14 +94,14 @@ const in2 = document.getElementById("in2"); // 2번 input
 const calcResult2 = document.getElementById("calcResult2"); //결과
 
 /** 첫 번째 값 x2 */
-function doubleFn(){
+function doubleFn() {
   const v1 = Number(in1.value);
 
-  calcResult2.innerText = v1 *2;
+  calcResult2.innerText = v1 * 2;
 }
 
 /** 두 번째 값 제곱 */
-function squareFn(){
+function squareFn() {
   const v2 = Number(in2.value);
 
   calcResult2.innerText = v2 * v2;
@@ -135,26 +135,26 @@ function squareFn(){
 */
 
 /** 전체 산술 연산 결과 출력 */
-function allOperationsFn(){
+function allOperationsFn() {
   const v1 = Number(in1.value); // 첫 번째 값
   const v2 = Number(in2.value); // 두 번째 값
 
   // 각각의 연산 결과를 별도의 변수에 저장
-  const plus = v1 +v2;
+  const plus = v1 + v2;
   const minus = v1 - v2;
   const multi = v1 * v2;
   const div = v1 / v2;
   const mod = v1 % v2;
 
   //태그가 포함된 결과 문자열 만들기
-  const result = 
-  "<ul>" 
-  + "<li>+ 결과 : " + plus + "</li>"
-  + "<li>+ 결과 : " + minus + "</li>"
-  + "<li>+ 결과 : " + multi + "</li>"
-  + "<li>+ 결과 : " + div + "</li>"
-  + "<li>+ 결과 : " + mod + "</li>"
-  + "</ul>" ;
+  const result =
+    "<ul>"
+    + "<li>+ 결과 : " + plus + "</li>"
+    + "<li>+ 결과 : " + minus + "</li>"
+    + "<li>+ 결과 : " + multi + "</li>"
+    + "<li>+ 결과 : " + div + "</li>"
+    + "<li>+ 결과 : " + mod + "</li>"
+    + "</ul>";
 
   // 태그가 포함된 문자열을
   // id가 calcResult2인 요소에
@@ -171,24 +171,24 @@ const result = document.getElementById("result");
 let count = 0;
 
 /** 1씩 감소하는 함수(decrease : 감소하다) */
-function decrease(){
+function decrease() {
   count--; // 또는 --count; -> count 변수 값을 1 감소
-           // count = count -1;
+  // count = count -1;
 
   result.innerText = count; // 감소한 값을 id가 result인 요소의 내용(innerText)로 대입
 }
 
 /** 1씩 증가하는 함수(increase : 증가하다) */
-function increase(){
+function increase() {
   count++; // 또는 ++count -> count 변수 값을 1 증가
-           // count = count + 1;
-  
+  // count = count + 1;
+
   result.innerText = count;
 }
 
 
 /* 전위/후위 연산 확인하기 */
-function checkFn(){
+function checkFn() {
 
   // 컴퓨터한테 연산은 +-*/같은 연산 기호를 해석하는 것 뿐만이 아니라
   // 코드/값을 읽고 실행하는 것도 연산이다! 
@@ -211,7 +211,7 @@ function checkFn(){
 
   console.log("=============================");
 
-    // 후위 연산(변수명++, 변수명--)
+  // 후위 연산(변수명++, 변수명--)
   // - 다른 어떤 연산보다도 나중에 실행(마지막에 실행)
 
   num = 100;
@@ -223,7 +223,7 @@ function checkFn(){
   console.log("num++ :", num++); // 102출력 -> num 1 증가 (103)
 
   console.log("---------------------");
-  
+
   console.log("num-- :", num--); // 103출력 -> num 1감소(102)
   console.log("num-- :", num--); // 102출력 -> num 1감소(101)
   console.log("num-- :", num--); // 101출력 -> num 1감소(100)
@@ -235,12 +235,12 @@ function checkFn(){
   let a = 10;
   let b = 5;
   let c = ++a * b--;
-  
+
   // 최종 a,b,c 값은?
   // a : 11
   // b : 4
   // c : 55
 
-  console.log(a,b,c);
-  
+  console.log(a, b, c);
+
 }

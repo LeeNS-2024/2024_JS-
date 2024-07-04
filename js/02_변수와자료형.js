@@ -35,21 +35,21 @@ console.log("number1 + number2 = ", number1 + number2);
 
 /* 1. var */
 /* 변수, 변수명 중복 O(덮어쓰기), 함수 레벨 범위(scope) */
-function varCheck(){
+function varCheck() {
 
   var menu = "콩국수";
   console.log("menu : ", menu);
 
-  var menu = "초밥"; 
+  var menu = "초밥";
   console.log("변경된 menu : ", menu);
 
-  var menu = "국밥"; 
+  var menu = "국밥";
   console.log("변경된 menu : ", menu);
 
   // var를 이용할 경우
   // 변수명이 중복되면 
   // 이전 값을 새로운 값으로 덮어쓰기함
-  
+
   // 문제점 : 이전에 대입한 값을 이용할 수 없다
   // -> 나중에 이전 값을 사용하고 싶은데
   //    나도 모르게 새로운 값을 대입해 지워버리는 경우가 생김
@@ -60,7 +60,7 @@ function varCheck(){
 
 /* 2. let */
 /* 변수, 변수명 중복 X, 블록 {} 레벨 범위 */
-function letCheck(){
+function letCheck() {
   let name = "홍길동";
   console.log("name : ", name);
 
@@ -77,10 +77,10 @@ function letCheck(){
 
   // 2. 새로운 변수 생성이 목적 -> 변수명 변경
   // let name2 = "김미영";
-  
+
   console.log("변경된 name : ", name);
 
-  
+
   // 새로운 변수 선언
   let name2 = "신짱구";
   console.log("name : ", name, "name2 : ", name2);
@@ -93,8 +93,8 @@ function letCheck(){
 
 // const로 선언된 변수에 값을 대입하면 변경 할 수 없다
 // (새로운 값 대입 불가)
-function constCheck(){
-  const nationalCode = 82; 
+function constCheck() {
+  const nationalCode = 82;
 
   console.log("국가 코드 : ", nationalCode);
 
@@ -130,16 +130,16 @@ function constCheck(){
 */
 
 // 함수 선언
-function scopeTest(){
+function scopeTest() {
   // 함수 정의
 
   var num1 = 100;
 
   // 만약 num1에 저장된 값이 100과 같다면
   // {} 내부 코드를 실행
-  if(num1 == 100){
+  if (num1 == 100) {
     var num2 = 200; // var를 이용해서 num2 변수 선언
-    
+
     // var로 선언되었기 때문에
     // 함수 {} 레벨 지역 변수
     // -> if문이 끝나도 함수가 끝난게 아니기 때문에
@@ -155,10 +155,10 @@ function scopeTest(){
   let num3 = 300;
 
   // num3 변수에 저장된 값이 300과 같다면 {} 내부 코드 수행
-  if(num3 == 300) {
+  if (num3 == 300) {
     let num4 = 400; // 블록 {} 레벨 지역 변수
-                    //  == 블록을 벗어나면 사용할 수 없다
-                    //  == 블록 내부에서만 사용 가능
+    //  == 블록을 벗어나면 사용할 수 없다
+    //  == 블록 내부에서만 사용 가능
     console.log("if 내부 num4 : ", num4);
   }
 
@@ -176,10 +176,10 @@ function scopeTest(){
 // 전역 변수 선언
 const global1 = "전역 변수1";
 
-function scopeTest2(){
+function scopeTest2() {
 
   const fn1 = "함수 지역 변수1"; // 상수(값 변경 X)
-  let fn2 =  "함수 지역 변수2"; // 변수(값 변경 O)
+  let fn2 = "함수 지역 변수2"; // 변수(값 변경 O)
 
   const temp = 123; // 테스트를 위한 임시 값(함수 지역 변수)
 
@@ -190,8 +190,8 @@ function scopeTest2(){
   console.log("if 실행 전 fn2 : ", fn2); // 함수 지역 변수2
 
   // == : 같다
-  if(1 == 1){ // 1과 1이 같다면 if {} 수행
-    
+  if (1 == 1) { // 1과 1이 같다면 if {} 수행
+
     const local1 = "if 지역 변수1";
 
     console.log("if 내부에서 global1 : ", global1); // 출력 O
@@ -210,7 +210,7 @@ function scopeTest2(){
     // 함수 지역 변수 temp와
     // 같은 이름의 
     // if 지역 변수 temp를 선언
-    const temp = 456; 
+    const temp = 456;
     console.log("if 내부의 temp : ", temp); // 456
 
     // 1) 범위가 다르면 변수명 중복 O
@@ -218,9 +218,9 @@ function scopeTest2(){
     // 2) 중복되는 변수 사용 시
     //    현재 범위의 변수가 호출된다
   }
-  
+
   console.log("if 실행 후 temp : ", temp); // 123
-  
+
 
   console.log("if 실행 후 fn2 : ", fn2); // 변경된 fn2
 
@@ -236,7 +236,7 @@ function scopeTest2(){
 /* 자료형 확인 */
 
 // 함수 선언
-function typeCheck(){
+function typeCheck() {
 
   // 함수 정의
 
@@ -261,13 +261,13 @@ function typeCheck(){
   const age = 25;
   const height = 180.4;
   const sight = -4.0;
-  
+
   console.log("age : ", age, typeof age);
   console.log("height : ", height, typeof height);
   console.log("sight : ", sight, typeof sight);
 
   /* boolean(논리형) : ture / false */
-  
+
   console.log("true : ", true, typeof ture);
   console.log("false : ", false, typeof false);
 
@@ -276,7 +276,7 @@ function typeCheck(){
   /* (쉬운 버전 설명) 값을 여러 개 저장할 수 있는 형태 */
 
   // 1) 배열 : 변수의 묶음
-  const numbers = [10,20,30]; // 배열 생성
+  const numbers = [10, 20, 30]; // 배열 생성
 
   console.log("cumbers : ", numbers, typeof numbers);
 
@@ -295,9 +295,9 @@ function typeCheck(){
   // V(value) == 변수에 저장된 값
 
   const user = {
-    id : "user01", // let id = "user01"
-    pw : "pass01", // let pw = "pass01"
-    point : 1200   // let point = 1200;
+    id: "user01", // let id = "user01"
+    pw: "pass01", // let pw = "pass01"
+    point: 1200   // let point = 1200;
   };
 
   console.log("user : ", user, typeof user);
@@ -318,11 +318,11 @@ function typeCheck(){
     const 함수명 = function (){}
     */
 
- const sumFn = function(a, b){ return a + b; }
+  const sumFn = function (a, b) { return a + b; }
 
- console.log(typeof sumFn); // function
- 
- console.log( sumFn );
+  console.log(typeof sumFn); // function
 
- console.log( sumFn(1, 3) ); // 4
+  console.log(sumFn);
+
+  console.log(sumFn(1, 3)); // 4
 }
