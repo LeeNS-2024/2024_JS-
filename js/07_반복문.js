@@ -379,45 +379,45 @@ function check24() {
   let ramenCount = 0; // 라면
   let donkkaseuCount = 0; // 돈까스
 
-    // prompt에 입력된 값을 저장할 변수
-    let input; // 선언만 한 경우 undefined
+  // prompt에 입력된 값을 저장할 변수
+  let input; // 선언만 한 경우 undefined
 
-    // input이 undefiend이기 때문에
-    // while문 첫 반복은 무조건 수행됨!!
-    while(input !== null){ // input이 null이 아니면 반복
-  
-      // prompt -> 확인 : 작성한 값 반환
-      // prompt -> 취소 : null
-      //      -> 취소 선택 시  while문 다음 반복 수행 X
-      input = prompt("메뉴 번호 입력");
-  
-      // input 값에 따라서 알맞는 case 수행
-      switch(input){
-        case '1' : gimbapCount++; break;
-        case '2' : ramenCount++; break;
-        case '3' : donkkaseuCount++;  break;
-        case null : alert("주문 완료!!!!" )
-      }
-  } 
+  // input이 undefiend이기 때문에
+  // while문 첫 반복은 무조건 수행됨!!
+  while (input !== null) { // input이 null이 아니면 반복
 
- // while end
+    // prompt -> 확인 : 작성한 값 반환
+    // prompt -> 취소 : null
+    //      -> 취소 선택 시  while문 다음 반복 수행 X
+    input = prompt("메뉴 번호 입력");
 
-let html =''; // 화면에 출력될 html 코드를 저장할 변수
+    // input 값에 따라서 알맞는 case 수행
+    switch (input) {
+      case '1': gimbapCount++; break;
+      case '2': ramenCount++; break;
+      case '3': donkkaseuCount++; break;
+      case null: alert("주문 완료!!!!")
+    }
+  }
 
-if(gimbapCount > 0){
-  html += `<li>김밥(${gimbapCount}개) : ${gimbapCount * gimbap}원</li>`;
-}
+  // while end
 
-if(ramenCount > 0){
-  html += `<li>라면(${ramenCount}개) : ${ramenCount * ramen}원</li>`;
-}
+  let html = ''; // 화면에 출력될 html 코드를 저장할 변수
 
-if(donkkaseuCount > 0){
-  html += `<li>돈까스(${donkkaseuCount}개) : ${donkkaseuCount * donkkaseu}원</li>`;
-}
-const sum = (gimbapCount * gimbap)
-            + (ramenCount * ramen)
-            + (donkkaseuCount* donkkaseu);
+  if (gimbapCount > 0) {
+    html += `<li>김밥(${gimbapCount}개) : ${gimbapCount * gimbap}원</li>`;
+  }
+
+  if (ramenCount > 0) {
+    html += `<li>라면(${ramenCount}개) : ${ramenCount * ramen}원</li>`;
+  }
+
+  if (donkkaseuCount > 0) {
+    html += `<li>돈까스(${donkkaseuCount}개) : ${donkkaseuCount * donkkaseu}원</li>`;
+  }
+  const sum = (gimbapCount * gimbap)
+    + (ramenCount * ramen)
+    + (donkkaseuCount * donkkaseu);
 
   html += `<li>합계 : ${sum}원</li>`;
 
