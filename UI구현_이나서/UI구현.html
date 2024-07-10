@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI구현_이나서</title>
+
+  <link rel="stylesheet" href="UI구현.css">
+</head>
+<body>
+  <h1>UI구현_이나서</h1>
+
+  <main>
+    <table  id="table">
+      <!-- 1행 -->
+      <tr>
+        <th>너비 :</th>
+        <th>
+          <input type="number" name="widthInput"> px
+        </th>
+        <th>높이 :</th>
+        <th>
+          <input type="number" name="heightInput"> px
+        </th>
+      </tr>
+
+      <!-- 2행 -->
+      <tr>
+        <th>글자크기 :</th>
+        <th>
+          <input type="number" name="fontSizeInput"> px
+        </th>
+        <th>굵기 :</th>
+        <th>
+          <label>보통<input type="radio" name="bor-btn" value="보통"></label>
+          <label>굵게<input type="radio" name="bor-btn" value="굵게"></label>
+        </th>
+      </tr>
+
+      <!-- 3행 -->
+      <tr>
+        <th>글자색 :</th>
+        <th>
+          <input type="text" name="fontColorInput">
+        </th>
+        <th>배경색 :</th>
+        <th>
+          <input type="text" name="backgroundColorInput">
+        </th>
+      </tr>
+
+      <!-- 4행 -->
+      <tr>
+        <th>가로정렬 :</th>
+        <th colspan="3">
+          <label>왼쪽<input type="radio" name="col-btn" value="왼쪽"></label>
+          <label>가운데<input type="radio" name="col-btn" value="가운데"></label>
+          <label>오른쪽<input type="radio" name="col-btn" value="오른쪽"></label>
+        </th>
+      </tr>
+
+      <!-- 5행 -->
+      <tr>
+        <th>세로정렬 :</th>
+        <th colspan="3">
+          <label>위<input type="radio" name="row-btn" value="위"></label>
+          <label>가운데<input type="radio" name="row-btn" value="가운데"></label>
+          <label>아래<input type="radio" name="row-btn" value="아래"></label>
+        </th>
+      </tr>
+
+      <!-- 6행 -->
+      <tr>
+        <th>출력 문자열 :</th>
+        <th colspan="3">
+          <input type="text" name="contentInput">
+        </th>
+      </tr>
+
+      <!-- 7행 -->
+      <tr>
+        <th colspan="4">
+          <button id="createBox">적용하기</button>
+        </th>
+      </tr>
+    </table>
+  </main>
+
+  <div id="output">
+    도형이 만들어 지는 곳
+  </div>
+
+
+
+
+  
+  
+
+  <script src="UI구현.js"></script>
+</body>
+</html>
