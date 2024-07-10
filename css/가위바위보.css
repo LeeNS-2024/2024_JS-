@@ -10,3 +10,34 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+ul{
+  list-style: none;
+}
+
+/* 감싸는 요소 */
+.container{
+  width: 810px;
+  height: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+}
+
+/* 가위바위보 게임판 */
+.game-board{
+  flex-grow: 1; /* 주어진 숫자비율만큼 공간채움 */
+  border-right: 1px solid black; /* 섹션을 나누는 선을 그어줌 */
+}
+
+/* 가위, 바위, 보 출력 행 */
+.box-row{
+  justify-content: space-evenly; /* content 배치를 균일하게 */
+  align-items: center; /* items을 교차축으로 center 정렬 */
+  display: flex;
+}
+
+.box-row h3{
+  text-align: center;
+  padding: 5px 0;
+  font-size: 28px;
+}
