@@ -1,68 +1,75 @@
-/* 입력 값들 받아오기 */
-
-/* 너비 */
-const w = document.getElementById(".widthInput").value;
-
-/* 높이 */
-const h = document.getElementById(".heightInput").value;
-
-/* 글자크기 */
-const fontS = document.getElementById(".fontSizeInput").value;
-
-/* 글자색 */
-const fontC = document.getElementById(".fontColorInput").value;
-
-/* 배경색 */
-const bC = document.getElementById(".backgroundColorInput").value;
-
-/* 출력 문자열 */
-const con = document.getElementById(".contentInput").value;
-
-/* const box = document. */
-
-/* const boxList = [w,h,fontS,fontC,bC,con]; */
-
-/* 결과 박스 */
-const box = document.querySelector("#output");
+const applyBtn = document.querySelector("#applyBtn"); // 적용하기 버튼
 
 
+applyBtn.addEventListener("click", () => {
 
+  //화면에 존재하는 입력 요소들 모두 얻어오기
 
-/* 클릭할 버튼 요소 얻어오기 */
-const createBox = document.querySelector("#createBox");
-
-
-/* 적용하기 버튼 클릭 시 */
-createBox.addEventListener("click", function(){
-
-  /* 굵기 버튼 값 얻어와서 체크됐을 때 */
-  const borB = document.querySelector("input[name = bor-btn]:checked".value);
-
-  if(borB === "보통"){
-    box.style.borderWidth = 2;
-  } else box.style.borderWidth = 8;
-
-
-  /* 가로정렬 버튼 값 얻어와서 체크됐을 때 */
-  const colB = document.querySelector("input[name = col-btn]:checked".value);
+  const boxWidth = document.querySelector("#boxWidth");
+  const boxHeight = document.querySelector("#boxHeight");
+  const fs = document.querySelector("#fs");
+  const boxFontColor = document.querySelector("#boxFontColor");
+  const boxBgColor = document.querySelector("#boxBgColor");
+  const content = document.querySelector("#content");
   
-  if(colB === "왼쪽"){
-    box.style.flexStart;
-  } else if (colB === "가운데") {
-    box.style.center;
-  } else {
-    box.style.flexEnd;
+  // 체크된 radio 요소만 얻어오기
+  
+  // name이 fw인 radio 버튼 checked된 값을 받아옴
+  // -> :checked 이용시 체크된 요소가 없다면 null
+  const fw = document.querySelector("[name=fw]:checked"); 
+
+  const alignRow = document.querySelector("[name=align-row]:checked"); 
+  const alignCol = document.querySelector("[name=align-col]:checked"); 
+
+  /* 변경되어야 되는 대상 */
+  const box = document.querySelector("#box");
+
+  /* 입력된 값이 있을 때만 css 적용 */
+
+  // 너비를 입력한 경우 / trim : 양쪽 공백없애기 /
+  if(boxWidth.value.trim().length > 0){
+    box.style.width = boxWidth.value + 'px';
   }
 
-  /* 세로 클릭버튼 값 얻어와서 체크됐을 때 */
-  const hB = document.querySelector("input[name = row-btn]:checked".value);
+  // 높이를 입력한 경우
+  if(boxHeight.value.trim().length > 0){
+    box.style.height = boxHeight.value + 'px';
+  }
 
-  box.style.width = w;
-  box.style.height = h;
-  box.style.fontSize = fontS;
-  box.style.fontColor = fontC;
-  box.style.backgroundColor = bC;
+  // 글자크기를 입력한 경우
+  if(fs.value.trim().length > 0){
+    box.style.fontsize = fs.value + 'px';
+  }
+
+  // 글자색을 입력한 경우
+  if(boxFontColor.value.trim().length > 0){
+    box.style.color = boxFontColor.value;
+  }
+
+  // 배경색을 입력한 경우
+  if(boxBgColor.value.trim().length > 0){
+    box.style.backgroundColor = boxBgColor.value;
+  }
+
+  // 출력할 문자열을 입력한 경우
+  if(content.value.trim().length > 0){
+    box.innerText = content.value;
+  }
+
+  // 굵기가 체크된 경우
+  if(fw !== null){
+    box.style.fontWeight = fw.value;
+  }
+
+  // 가로정렬이 체크된 경우
+  if(alignRow !== null){
+    box.style.justifyContent = alignRow.value;
+  }
+
+  // 세로정렬이 체크된 경우
+  if(alignCol !== null){
+    box.style.alignItems = alignCol.value;
+  }
+
 
 });
-
-var reBox = document.createElement("output");
