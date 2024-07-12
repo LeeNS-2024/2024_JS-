@@ -24,6 +24,8 @@ applyBtn.addEventListener("click", () => {
   /* 변경되어야 되는 대상 */
   const box = document.querySelector("#box");
 
+  /* 박스 초기화 */
+  box.innerHTML = '';
   /* 입력된 값이 있을 때만 css 적용 */
 
   // 너비를 입력한 경우 / trim : 양쪽 공백없애기 /
@@ -38,7 +40,7 @@ applyBtn.addEventListener("click", () => {
 
   // 글자크기를 입력한 경우
   if(fs.value.trim().length > 0){
-    box.style.fontsize = fs.value + 'px';
+    box.style.fontSize = fs.value + 'px';
   }
 
   // 글자색을 입력한 경우
